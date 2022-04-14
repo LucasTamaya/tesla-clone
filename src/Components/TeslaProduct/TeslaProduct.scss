@@ -1,0 +1,63 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.teslaProduct__bg {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+}
+
+.teslaProduct__info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+}
+
+.teslaProduct__text {
+  text-align: center;
+}
+
+.teslaProduct__title {
+  @include font-4xl;
+  margin-bottom: 7px;
+}
+
+.teslaProduct__description {
+  letter-spacing: 1px;
+}
+
+.teslaProduct__btnContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.teslaProduct__btn--gray {
+  @include productCtaBtn($primary-clr-three, $primary-clr-two);
+}
+
+.teslaProduct__btn--white {
+  @include productCtaBtn($primary-clr-two, $primary-clr-three);
+}
+
+.teslaProduct__btn--black {
+  @include productCtaBtn($primary-clr-one, $primary-clr-two);
+}
+
+@media screen and (min-width: 600px) {
+  .teslaProduct__btnContainer {
+    flex-direction: row;
+    column-gap: 25px;
+  }
+
+  .teslaProduct__btn--black{
+    margin: 0 auto;
+    width: 250px;
+  }
+}
