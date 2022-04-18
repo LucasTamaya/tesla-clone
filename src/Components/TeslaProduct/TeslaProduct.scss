@@ -20,7 +20,6 @@
 
 .teslaProduct__text {
   text-align: center;
-  // background-color: red;
   overflow: hidden;
 }
 
@@ -31,9 +30,7 @@
 }
 
 .teslaProduct__description {
-  letter-spacing: 1px;
-  opacity: 0;
-  animation: firstLoadTransitionDownToUp 0.8s 0.5s forwards;
+  animation: firstLoadTransitionDownToUp 0.8s;
 }
 
 .teslaProduct__btnContainer {
@@ -46,12 +43,12 @@
 
 .teslaProduct__btn--gray {
   @include productCtaBtn($primary-clr-three, $primary-clr-two);
-  animation: firstLoadTransitionLeftToRight 0.8s 0.8s forwards;
+  animation: firstLoadTransitionLeftToRight 0.8s;
 }
 
 .teslaProduct__btn--white {
   @include productCtaBtn($primary-clr-two, $primary-clr-three);
-  animation: firstLoadTransitionRightToLeft 0.8s 0.8s forwards;
+  animation: firstLoadTransitionRightToLeft 0.8s;
 }
 
 .teslaProduct__btn--black {
@@ -59,9 +56,24 @@
 }
 
 @media screen and (min-width: 600px) {
+  .teslaProduct__description {
+    opacity: 0;
+    animation: firstLoadTransitionDownToUp 0.8s 0.5s forwards;
+  }
+
   .teslaProduct__btnContainer {
     flex-direction: row;
     column-gap: 25px;
+  }
+
+  .teslaProduct__btn--gray {
+    animation: firstLoadTransitionLeftToRight 0.8s 0.8s forwards;
+    opacity: 0;
+  }
+
+  .teslaProduct__btn--white {
+    animation: firstLoadTransitionRightToLeft 0.8s 0.8s forwards;
+    opacity: 0;
   }
 
   .teslaProduct__btn--black {

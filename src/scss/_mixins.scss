@@ -1,26 +1,26 @@
 @mixin font-xs {
-  font-size: 0.75rem; /* 12px */
-  line-height: 1rem; /* 16px */
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 @mixin font-sm {
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.25rem; /* 20px */
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 @mixin font-lg {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.75rem; /* 28px */
+  font-size: 1.1rem;
+  line-height: 1.75rem;
 }
 
 @mixin font-3xl {
-  font-size: 1.875rem; /* 30px */
-  line-height: 2.25rem; /* 36px */
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 @mixin font-4xl {
-  font-size: 2.25rem; /* 36px */
-  line-height: 2.5rem; /* 40px */
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 @mixin productCtaBtn($bgColor, $txtColor) {
@@ -30,9 +30,8 @@
   background-color: $bgColor;
   color: $txtColor;
   width: 100%;
+  @include font-xs;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: pointer;
-  opacity: 0;
 }

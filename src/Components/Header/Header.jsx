@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+
 import "./Header.scss";
 import teslaLogo from "../../../assets/tesla.svg";
 import Nav from "../Nav/Nav";
 
 function Header() {
-  // Permet de gérer l'apparition et la disparition du menu
+  // Show / hide the menu on small screen
   const [styleMenu, setStyleMenu] = useState("hide");
 
   return (
