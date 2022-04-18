@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   padding: 30px;
+  scroll-snap-align: center;
 }
 
 .teslaProduct__info {
@@ -19,15 +20,20 @@
 
 .teslaProduct__text {
   text-align: center;
+  // background-color: red;
+  overflow: hidden;
 }
 
 .teslaProduct__title {
   @include font-4xl;
   margin-bottom: 7px;
+  animation: firstLoadTransitionDownToUp 1s;
 }
 
 .teslaProduct__description {
   letter-spacing: 1px;
+  opacity: 0;
+  animation: firstLoadTransitionDownToUp 0.8s 0.5s forwards;
 }
 
 .teslaProduct__btnContainer {
@@ -40,10 +46,12 @@
 
 .teslaProduct__btn--gray {
   @include productCtaBtn($primary-clr-three, $primary-clr-two);
+  animation: firstLoadTransitionLeftToRight 0.8s 0.8s forwards;
 }
 
 .teslaProduct__btn--white {
   @include productCtaBtn($primary-clr-two, $primary-clr-three);
+  animation: firstLoadTransitionRightToLeft 0.8s 0.8s forwards;
 }
 
 .teslaProduct__btn--black {
@@ -56,7 +64,7 @@
     column-gap: 25px;
   }
 
-  .teslaProduct__btn--black{
+  .teslaProduct__btn--black {
     margin: 0 auto;
     width: 250px;
   }
